@@ -1,17 +1,30 @@
-<!-- App.svelte -->
 <script>
   import MapView from './components/MapView.svelte';
+  import Selection from './components/Selection.svelte';
 </script>
 
+<main>
+  <div class="container">
+    <div class="map">
+      <MapView />
+    </div>
+    <div class="selection-panel">
+      <Selection />
+    </div>
+  </div>
+</main>
+
 <style>
-  main {
-    font-family: 'Arial', sans-serif;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+  }
+  .map {
+    flex: 1 1 60%;
+  }
+  .selection-panel {
+    flex: 1 1 35%;
   }
 </style>
-
-<main>
-  <h1>Middlesex County Housing Demographics Visualization</h1>
-  <MapView />
-</main>
